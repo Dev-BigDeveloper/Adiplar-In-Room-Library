@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.adiplar.fragments.menuFragments.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_addAdbFragment"
+            app:destination="@id/addAdbFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAdbFragment"
+        android:name="com.example.adiplar.fragments.SettingsFragments.AddAdbFragment"
+        android:label="fragment_add_adb"
+        tools:layout="@layout/fragment_add_adb" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.adiplar.fragments.SettingsFragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/clickItemFragment"
+        android:name="com.example.adiplar.fragments.itemClickFragments.ClickItemFragment"
+        android:label="fragment_click_item"
+        tools:layout="@layout/fragment_click_item" />
+</navigation>

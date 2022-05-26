@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5"
+    tools:context=".fragments.adibsFragments.AdibsListFragment">
+
+
+       <TextView
+           android:id="@+id/textView"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="28dp"
+           android:layout_marginTop="32dp"
+           android:text="Adiblar \nhayoti va ijodi"
+           android:textColor="@color/black"
+           android:textSize="30sp"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <LinearLayout
+           android:id="@+id/search"
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+           android:layout_marginTop="37dp"
+           android:background="@drawable/search_customer"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.792"
+           app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+           android:gravity="center"
+           app:layout_constraintStart_toEndOf="@+id/textView"
+           app:layout_constraintTop_toTopOf="parent" >
+
+          <ImageView
+              android:layout_width="35dp"
+              android:layout_height="35dp"
+              android:layout_marginLeft="11dp"
+              android:background="@android:color/transparent"
+              android:layout_marginTop="7dp"
+              android:src="@drawable/ic_baseline_search_24"
+              />
+
+       </LinearLayout>
+
+       <com.google.android.material.tabs.TabLayout
+           android:id="@+id/tableLayout"
+           android:layout_width="350dp"
+           android:layout_height="50dp"
+           android:layout_marginTop="40dp"
+           android:background="@drawable/tab_corner_bg"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.508"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/textView"
+           app:tabGravity="center"
+           app:tabIndicator="@drawable/tab_corner_border"
+           app:tabIndicatorAnimationMode="elastic"
+           app:tabIndicatorColor="#0000"
+           app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+           app:tabIndicatorHeight="30dp"
+           app:tabIndicatorGravity="center"
+           app:tabMode="fixed"
+           app:tabSelectedTextColor="@color/white"
+           app:tabTextColor="@color/black" />
+
+   <androidx.viewpager2.widget.ViewPager2
+       android:id="@+id/view_pager"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_marginLeft="25dp"
+       android:layout_marginRight="25dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
